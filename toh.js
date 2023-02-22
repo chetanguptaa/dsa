@@ -1,4 +1,4 @@
-function towerOfHanoi(n, fromRod, toRod, usingRod) {
+const towerOfHanoi = (n, fromRod, toRod, usingRod) => {
     if (n === 1) {
       console.log(`Move disk 1 from ${fromRod} to ${toRod}`)
       return
@@ -8,5 +8,5 @@ function towerOfHanoi(n, fromRod, toRod, usingRod) {
     towerOfHanoi(n - 1, usingRod, toRod, fromRod)
   }
   
-  towerOfHanoi(3, 'A', 'C', 'B')
+  towerOfHanoi(7, 'A', 'C', 'B')
   

@@ -1,19 +1,16 @@
 const binarySearch = (arr, target) => {
-    let left = 0;
-    let right  = arr.length - 1;
-    for ( let i= left; i <= right; i++) {
-        let middleIndex = Math.floor((left + right) / 2);
+    let leftIndex = 0;
+    let rightIndex  = arr.length - 1;
+    let middleIndex = Math.round((leftIndex + rightIndex) / 2);
+    for ( let i= leftIndex; i <= rightIndex; i++) {
         if ( target === arr[middleIndex]) {
             return middleIndex;
         } else if ( target > arr[middleIndex]) {
-            left = middleIndex + 1;
+            leftIndex = middleIndex + 1;
         } else {
-            right = middleIndex - 1;
+            rightIndex = middleIndex - 1;
         }
     }
     return -1;
 }
-
-
-
-console.log(binarySearch([-4, -777,10 , -1 ] , 10));
+console.log(binarySearch([1,2,3,4,5], 3));
