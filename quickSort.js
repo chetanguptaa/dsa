@@ -1,4 +1,4 @@
-function quickSort(arr) {
+const quickSort = (arr) => {
     if (arr.length < 2) return arr
     let pivot = arr[arr.length - 1]
     let left = []

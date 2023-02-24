@@ -1,4 +1,4 @@
-function isPrime(n) {
+const isPrime =(n) => {
     if(n < 2) {
         return false;
     }
