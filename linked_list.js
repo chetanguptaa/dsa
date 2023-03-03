@@ -30,7 +30,6 @@ class LinkedList  {
                 }
                 currentNode.next = node;
             }
-
             lenght++;
         };
 
