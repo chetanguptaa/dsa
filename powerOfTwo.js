@@ -1,4 +1,4 @@
-function isPowerOfTwo(n) {
+const isPowerOfTwo = (n) => {
         if (n < 1) {
         return false;
     }
@@ -15,7 +15,7 @@ function isPowerOfTwo(n) {
 console.log(isPowerOfTwo(1));
 console.log(isPowerOfTwo(86));
 
-function isPowerOfTwoBitWise(n) {
+const isPowerOfTwoBitWise = (n) => {
     if (n < 1){
         return false
     }
