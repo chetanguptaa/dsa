@@ -4,7 +4,7 @@
 // right child: i * 2 + 1
 // parent: i / 2
 
-let MinHeap = function() {
+const MinHeap = function() {
 	
 	let heap = [null];
 	

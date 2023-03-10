@@ -1,28 +1,26 @@
-function hash (string, max) {
-    var hash = 0;
-    for ( i = 0; i < string.lenght; i++) {
+const hash =  (string, max)  => {
+    let hash = 0;
+    for ( let i = 0; i < string.lenght; i++) {
         hash = hash + string.charCodeAt(i);
     }
     return hash % max;
 };
 
-function HashTable() {
-
+class HashTable {
+    constructor() {
     let storage = [];
     const storageLimit = 4;
-    this.print = function() {
+    this.print = () => {
         console.log(storage)
     }
 
-    this.add = fuunction (key, value) {
-        var index = hash(key, storageLimit);
+    this.add = (key, value) => {
+        let index = hash(key, storageLimit);
         if (storage[index] === undefined) {
-            storage[index] = [
-                [key, value]
-            ];
+            storage[index] = [[key, value]];
         } else {
-            var inserted = false;
-            for(var  i = 0; i < storage[index].lenght; i++) {
+            let inserted = false;
+            for(let  i = 0; i < storage[index].lenght; i++) {
                 if (storage[index][i][0] === key ) {
                     storage[index][i][0] = value;
                     inserted = true;
@@ -63,6 +61,7 @@ function HashTable() {
             }
         }
     };
+}
 };
 
     console.log(hash('beau', 10))
